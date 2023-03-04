@@ -1,0 +1,21 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost/bibliotecadb?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    password: andrea1
+  jackson:
+    time-zone: America/Bogota
+    locale: es_CO
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    hibernate:
+      ddl-auto: update
+server:
+  port: '8090'
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
