@@ -1,6 +1,5 @@
 package com.biblioteca.service;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,8 +43,8 @@ public class LibroService {
 	}
 	
 	// find by titulo	
-	public List<Libro> finbytituloLibro(String titulo){
-		return iLibroRepository.findByTitulo(titulo);
+	public Libro findbytituloLibro(String titulo){
+		return iLibroRepository.findByTitulo(titulo).orElse(null);
 	}
 	
 	//return boolean if  existed id

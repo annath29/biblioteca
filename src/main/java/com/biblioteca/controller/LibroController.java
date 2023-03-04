@@ -1,7 +1,5 @@
 package com.biblioteca.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,8 +42,8 @@ public class LibroController {
 	}
 	
 	@GetMapping("/trae-titulo")	
-	public List<Libro> finbytitulo(String titulo){
-		return libroService.finbytituloLibro(titulo);
+	public Libro findByTitulo(String titulo){
+		return libroService.findbytituloLibro(titulo);
 	}
 	
 	@GetMapping("/ifpresent")

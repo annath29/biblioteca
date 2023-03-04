@@ -25,7 +25,7 @@ public class Categoria {
 	private String nombre;
 	
 	@JsonIgnoreProperties({"categoria","hibernateLazyInitializer","handler"})
-	@OneToMany(fetch=FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "categoria")
+	@OneToMany(fetch=FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "categoria",orphanRemoval = true)
 	private List<Libro>libros;
 	
 	//getter and setter

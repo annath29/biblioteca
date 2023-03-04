@@ -1,5 +1,6 @@
 package com.biblioteca.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,9 +48,9 @@ public class EditorialController {
 		return editorialService.returnpresentidEditorial(id);
 	}
 	
-	//find by name
-	/*public List<Editorial> findbynameletter(char letra) {
-		return iEditorialRepository.searchEditorialByLetterName(letra);
+	/*@GetMapping("/trae-letra")
+	public List<Editorial> findbynameletter(String letra) {
+		return editorialService.findbynameletter(letra);
 	}*/
 
 }

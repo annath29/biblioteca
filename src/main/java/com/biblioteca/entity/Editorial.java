@@ -11,7 +11,6 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -26,7 +25,7 @@ public class Editorial {
 	private String nombre;
 	
 	@JsonIgnoreProperties({"editorial","hibernateLazyInitializer","handler"})
-	@OneToMany (fetch=FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "editorial")//mappedby name the class manytoone
+	@OneToMany (fetch=FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "editorial",orphanRemoval = true)//mappedby name the class manytoone
 	private List<Libro>libros;
 
 	//getter and setter

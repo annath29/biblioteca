@@ -1,7 +1,5 @@
 package com.biblioteca.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -53,8 +51,8 @@ public class EditorialService {
 		}
 	}
 	
-	//find by name
-	/*public List<Editorial> findbynameletter(char letra) {
+	/*//find by name
+	public List<Editorial> findbynameletter(String letra) {
 		return iEditorialRepository.searchEditorialByLetterName(letra);
 	}*/
 }
